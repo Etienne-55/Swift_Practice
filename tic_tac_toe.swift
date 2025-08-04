@@ -11,9 +11,10 @@ func mainMenu() {
 var condition: Int = 0
 
 repeat {
-    print("1->Start game:")
+    print("1->Start game")
     print("2->Hard game")
-    print("3->Exit program:\n")
+    print("3->Two players game")
+    print("4->Exit program\n")
     if let userInput = readLine(), let option = Int(userInput){
     condition = option
 
@@ -22,7 +23,7 @@ repeat {
             cleanArrayAndPLayNormal()
     case 2: 
             cleanArrayAndPLayHard()
-    case 3:
+    case 4:
             print("Program finished")
     default:
         print("Invalid option")
@@ -70,21 +71,29 @@ repeat {
 
     if position > 9 {
         endGame = true
-    } else if d[0] == d[1] && d[1] == d[2]{
+    } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
+        print("x won")
         endGame = true
-    } else if d[3] == d[4] && d[4] == d[5]{
+    } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
+        print("x won")
         endGame = true
-    } else if d[6] == d[7] && d[7] == d[8]{
+    } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
+        print("x won")
         endGame = true
-    } else if d[0] == d[3] && d[3] == d[6]{
+    } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
+        print("x won")
         endGame = true
-    } else if d[1] == d[4] && d[4] == d[7]{
+    } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
+        print("x won")
         endGame = true
-    } else if d[2] == d[5] && d[5] == d[8]{
+    } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
+        print("x won")
         endGame = true
-    } else if d[0] == d[4] && d[4] == d[8]{
+    } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
+        print("x won")
         endGame = true
-    } else if d[2] == d[4] && d[4] == d[6]{
+    } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
+        print("x won")
         endGame = true
 }
     if let userInput = readLine(), let position = Int(userInput) {
@@ -137,6 +146,34 @@ repeat {
         print("Error with the bot")
     } 
 
+    if position > 9 {
+        endGame = true
+    } else if d[0] == "o" && d[1] == "o" && d[2] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[3] == "o" && d[4] == "o" && d[5] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[6] == "o" && d[7] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[0] == "o" && d[3] == "o" && d[6] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[1] == "o" && d[4] == "o" && d[7] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[2] == "o" && d[5] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[0] == "o" && d[4] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[2] == "o" && d[4] == "o" && d[6] == "o"{
+        print("o won")
+        endGame = true
+}
+
         }
     } while endGame == false
     print("Game ended")
@@ -163,21 +200,29 @@ repeat {
 
     if position > 9 {
         endGame = true
-    } else if d[0] == d[1] && d[1] == d[2]{
+    } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
+        print("x won")
         endGame = true
-    } else if d[3] == d[4] && d[4] == d[5]{
+    } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
+        print("x won")
         endGame = true
-    } else if d[6] == d[7] && d[7] == d[8]{
+    } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
+        print("x won")
         endGame = true
-    } else if d[0] == d[3] && d[3] == d[6]{
+    } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
+        print("x won")
         endGame = true
-    } else if d[1] == d[4] && d[4] == d[7]{
+    } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
+        print("x won")
         endGame = true
-    } else if d[2] == d[5] && d[5] == d[8]{
+    } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
+        print("x won")
         endGame = true
-    } else if d[0] == d[4] && d[4] == d[8]{
+    } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
+        print("x won")
         endGame = true
-    } else if d[2] == d[4] && d[4] == d[6]{
+    } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
+        print("x won")
         endGame = true
 }
     if let userInput = readLine(), let position = Int(userInput) {
@@ -259,6 +304,33 @@ repeat {
     } else{
         print("Error with the bot")
     } 
+    if position > 9 {
+        endGame = true
+    } else if d[0] == "o" && d[1] == "o" && d[2] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[3] == "o" && d[4] == "o" && d[5] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[6] == "o" && d[7] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[0] == "o" && d[3] == "o" && d[6] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[1] == "o" && d[4] == "o" && d[7] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[2] == "o" && d[5] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[0] == "o" && d[4] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[2] == "o" && d[4] == "o" && d[6] == "o"{
+        print("o won")
+        endGame = true
+}
 
         }
     } while endGame == false
