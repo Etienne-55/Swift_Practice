@@ -1,10 +1,9 @@
-var eenuChoice: Int = 0
 let boardNumbers: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
 var d = boardNumbers
 var position: Int = 0
+var position2: Int = 0
 var endGame = false
 
-//removeALL
 
 func mainMenu() {
 
@@ -23,13 +22,15 @@ repeat {
             cleanArrayAndPLayNormal()
     case 2: 
             cleanArrayAndPLayHard()
+    case 3:
+            cleanArrayAndPLayTwoPlayers()
     case 4:
             print("Program finished")
     default:
         print("Invalid option")
             }
         }
-    } while condition != 3
+    } while condition != 4
 }
 
 func cleanArrayAndPLayNormal() {
@@ -50,6 +51,14 @@ hardGame()
 
 }
 
+func cleanArrayAndPLayTwoPlayers() {
+
+d.removeAll()
+d = boardNumbers
+endGame = false
+twoPlayersGame()
+
+}
 
 func mainGame() {
 
@@ -201,28 +210,28 @@ repeat {
     if position > 9 {
         endGame = true
     } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
     } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
     } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
     } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
     } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
     } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
     } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
     } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
-        print("x won")
+        print("PLayer 1->x won")
         endGame = true
 }
     if let userInput = readLine(), let position = Int(userInput) {
@@ -332,6 +341,130 @@ repeat {
         endGame = true
 }
 
+        }
+    } while endGame == false
+    print("Game ended")
+}
+
+func twoPlayersGame() {
+
+    if position > 9 {
+        endGame = true
+    } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+    } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+    } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+    } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+    } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+    } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+    } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+    } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
+        print("PLayer 1->x won")
+        endGame = true
+}
+    if position > 9 {
+        endGame = true
+    } else if d[0] == "o" && d[1] == "o" && d[2] == "o"{
+        print("player 2->o won")
+        endGame = true
+    } else if d[3] == "o" && d[4] == "o" && d[5] == "o"{
+        print("player 2->o won")
+        endGame = true
+    } else if d[6] == "o" && d[7] == "o" && d[8] == "o"{
+        print("player 2->o won")
+        endGame = true
+    } else if d[0] == "o" && d[3] == "o" && d[6] == "o"{
+        print("player 2->o won")
+        endGame = true
+    } else if d[1] == "o" && d[4] == "o" && d[7] == "o"{
+        print("player 2->o won")
+        endGame = true
+    } else if d[2] == "o" && d[5] == "o" && d[8] == "o"{
+        print("player 2->o won")
+        endGame = true
+    } else if d[0] == "o" && d[4] == "o" && d[8] == "o"{
+        print("player 2->o won")
+        endGame = true
+    } else if d[2] == "o" && d[4] == "o" && d[6] == "o"{
+        print("player 2->o won")
+        endGame = true
+}
+
+repeat {
+    
+    print("     Tic Tac Toe!    \n ")
+    print("PLayer 1 (X) - Player 2 (O)\n")
+    print("Choose a position: \n")
+
+    print("       |       |    \n")
+    print("  \(d[0])    |  \(d[1])    |  \(d[2])  \n")
+    print("_______|_______|_______\n")
+    print("       |       |       \n")
+    print("  \(d[3])    |  \(d[4])    |  \(d[5])  \n")
+    print("_______|_______|_______\n")
+    print("       |       |    \n")
+    print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
+    print("       |       |       \n")
+
+    if let userInput = readLine(), let position = Int(userInput) {
+    
+    d[position] = "x"
+
+    if d[position] != "x" && d[position] != "o" {
+        d[position] = "x"
+    } else {
+        print("\n")
+    }
+    
+    if position > 8 {
+        print("Invalid number")
+    } else {
+        d[position] = "x"
+    } 
+
+    print("     Tic Tac Toe!    \n ")
+    print("PLayer 1 (X) - Player 2 (O)\n")
+    print("Choose a position: \n")
+
+    print("       |       |    \n")
+    print("  \(d[0])    |  \(d[1])    |  \(d[2])  \n")
+    print("_______|_______|_______\n")
+    print("       |       |       \n")
+    print("  \(d[3])    |  \(d[4])    |  \(d[5])  \n")
+    print("_______|_______|_______\n")
+    print("       |       |    \n")
+    print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
+    print("       |       |       \n")
+
+    if let userInput2 = readLine(), let position2 = Int(userInput2) {
+    
+    d[position2] = "o"
+
+    if d[position2] != "x" && d[position2] != "o" {
+        d[position2] = "x"
+    } else {
+        print("\n")
+    }
+    
+    if position2 > 8 {
+        print("Invalid number")
+    } else {
+        d[position2] = "o"
+    } 
+}
         }
     } while endGame == false
     print("Game ended")
