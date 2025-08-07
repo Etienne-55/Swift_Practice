@@ -80,33 +80,8 @@ repeat {
     print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
     print("       |       |       \n")
 
-    if position > 9 {
-        endGame = true
-    } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
-        print("x won")
-        endGame = true
-    } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
-        print("x won")
-        endGame = true
-    } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
-        print("x won")
-        endGame = true
-    } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
-        print("x won")
-        endGame = true
-    } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
-        print("x won")
-        endGame = true
-    } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
-        print("x won")
-        endGame = true
-    } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
-        print("x won")
-        endGame = true
-    } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
-        print("x won")
-        endGame = true
-}
+    victoryLogicX()
+
     if let userInput = readLine(), let position = Int(userInput) {
     
     d[position] = "x"
@@ -157,33 +132,7 @@ repeat {
         print("Error with the bot")
     } 
 
-    if position > 9 {
-        endGame = true
-    } else if d[0] == "o" && d[1] == "o" && d[2] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[3] == "o" && d[4] == "o" && d[5] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[6] == "o" && d[7] == "o" && d[8] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[0] == "o" && d[3] == "o" && d[6] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[1] == "o" && d[4] == "o" && d[7] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[2] == "o" && d[5] == "o" && d[8] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[0] == "o" && d[4] == "o" && d[8] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[2] == "o" && d[4] == "o" && d[6] == "o"{
-        print("o won")
-        endGame = true
-}
+    victoryLogicO()
 
         }
     } while endGame == false
@@ -208,33 +157,8 @@ repeat {
     print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
     print("       |       |       \n")
 
-    if position > 9 {
-        endGame = true
-    } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-}
+    victoryLogicX()
+
     if let userInput = readLine(), let position = Int(userInput) {
     
     d[position] = "x"
@@ -314,33 +238,8 @@ repeat {
     } else{
         print("Error with the bot")
     } 
-    if position > 9 {
-        endGame = true
-    } else if d[0] == "o" && d[1] == "o" && d[2] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[3] == "o" && d[4] == "o" && d[5] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[6] == "o" && d[7] == "o" && d[8] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[0] == "o" && d[3] == "o" && d[6] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[1] == "o" && d[4] == "o" && d[7] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[2] == "o" && d[5] == "o" && d[8] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[0] == "o" && d[4] == "o" && d[8] == "o"{
-        print("o won")
-        endGame = true
-    } else if d[2] == "o" && d[4] == "o" && d[6] == "o"{
-        print("o won")
-        endGame = true
-}
+
+    victoryLogicO()
 
         }
     } while endGame == false
@@ -379,6 +278,8 @@ repeat {
         d[position] = "x"
     } 
 
+    victoryLogicX()
+
     print("Player 2 (O)\n")
     print("Choose a position: \n")
 
@@ -409,64 +310,71 @@ repeat {
     } 
 }
 
-    if position > 9 {
-        endGame = true
-    } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-    } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
-        print("PLayer 1->x won")
-        endGame = true
-}
-    if position > 9 {
-        endGame = true
-    } else if d[0] == "o" && d[1] == "o" && d[2] == "o"{
-        print("player 2->o won")
-        endGame = true
-    } else if d[3] == "o" && d[4] == "o" && d[5] == "o"{
-        print("player 2->o won")
-        endGame = true
-    } else if d[6] == "o" && d[7] == "o" && d[8] == "o"{
-        print("player 2->o won")
-        endGame = true
-    } else if d[0] == "o" && d[3] == "o" && d[6] == "o"{
-        print("player 2->o won")
-        endGame = true
-    } else if d[1] == "o" && d[4] == "o" && d[7] == "o"{
-        print("player 2->o won")
-        endGame = true
-    } else if d[2] == "o" && d[5] == "o" && d[8] == "o"{
-        print("player 2->o won")
-        endGame = true
-    } else if d[0] == "o" && d[4] == "o" && d[8] == "o"{
-        print("player 2->o won")
-        endGame = true
-    } else if d[2] == "o" && d[4] == "o" && d[6] == "o"{
-        print("player 2->o won")
-        endGame = true
-}
+    victoryLogicO()
 
         }
     } while endGame == false
     print("Game ended")
+}
+
+func victoryLogicX() {
+    if position > 9 {
+        endGame = true
+    } else if d[0] == "x" && d[1] == "x" && d[2] == "x"{
+        print("x won")
+        endGame = true
+    } else if d[3] == "x" && d[4] == "x" && d[5] == "x"{
+        print("x won")
+        endGame = true
+    } else if d[6] == "x" && d[7] == "x" && d[8] == "x"{
+        print("x won")
+        endGame = true
+    } else if d[0] == "x" && d[3] == "x" && d[6] == "x"{
+        print("x won")
+        endGame = true
+    } else if d[1] == "x" && d[4] == "x" && d[7] == "x"{
+        print("x won")
+        endGame = true
+    } else if d[2] == "x" && d[5] == "x" && d[8] == "x"{
+        print("x won")
+        endGame = true
+    } else if d[0] == "x" && d[4] == "x" && d[8] == "x"{
+        print("x won")
+        endGame = true
+    } else if d[2] == "x" && d[4] == "x" && d[6] == "x"{
+        print("x won")
+        endGame = true
+    }
+}
+
+func victoryLogicO() {
+    if position > 9 {
+        endGame = true
+    } else if d[0] == "o" && d[1] == "o" && d[2] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[3] == "o" && d[4] == "o" && d[5] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[6] == "o" && d[7] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[0] == "o" && d[3] == "o" && d[6] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[1] == "o" && d[4] == "o" && d[7] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[2] == "o" && d[5] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[0] == "o" && d[4] == "o" && d[8] == "o"{
+        print("o won")
+        endGame = true
+    } else if d[2] == "o" && d[4] == "o" && d[6] == "o"{
+        print("o won")
+        endGame = true
+    }
 }
 
 mainMenu()
