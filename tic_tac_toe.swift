@@ -134,19 +134,8 @@ func hardGame() {
 
 repeat {
     
-    print("PLayer 1 (X) - Player 2 (O)\n")
-    print("Choose a position: \n")
-
-    print("       |       |    \n")
-    print("  \(d[0])    |  \(d[1])    |  \(d[2])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |       \n")
-    print("  \(d[3])    |  \(d[4])    |  \(d[5])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |    \n")
-    print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
-    print("       |       |       \n")
-
+    boardGame() 
+    
     victoryLogicX()
 
     if let userInput = readLine(), let position = Int(userInput) {
@@ -239,18 +228,7 @@ repeat {
 func twoPlayersGame() {
 repeat {
     
-    print("PLayer 1 (X)\n")
-    print("Choose a position: \n")
-
-    print("       |       |    \n")
-    print("  \(d[0])    |  \(d[1])    |  \(d[2])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |       \n")
-    print("  \(d[3])    |  \(d[4])    |  \(d[5])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |    \n")
-    print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
-    print("       |       |       \n")
+    boardGame()
 
     if let userInput = readLine(), let position = Int(userInput) {
     
@@ -269,19 +247,6 @@ repeat {
     } 
 
     victoryLogicX()
-
-    print("Player 2 (O)\n")
-    print("Choose a position: \n")
-
-    print("       |       |    \n")
-    print("  \(d[0])    |  \(d[1])    |  \(d[2])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |       \n")
-    print("  \(d[3])    |  \(d[4])    |  \(d[5])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |    \n")
-    print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
-    print("       |       |       \n")
 
     if let userInput2 = readLine(), let position2 = Int(userInput2) {
     
