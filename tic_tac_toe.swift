@@ -67,18 +67,8 @@ twoPlayersGame()
 func mainGame() {
 
 repeat {
-    print("PLayer 1 (X) - Player 2 (O)\n")
-    print("Choose a position: \n")
     
-    print("       |       |    \n")
-    print("  \(d[0])    |  \(d[1])    |  \(d[2])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |       \n")
-    print("  \(d[3])    |  \(d[4])    |  \(d[5])  \n")
-    print("_______|_______|_______\n")
-    print("       |       |    \n")
-    print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
-    print("       |       |       \n")
+    boardGame()
 
     victoryLogicX()
 
@@ -315,6 +305,23 @@ repeat {
         }
     } while endGame == false
     print("Game ended")
+}
+
+func boardGame() {
+
+    print("PLayer 1 (X) - Player 2 (O)\n")
+    print("Choose a position: \n")
+    
+    print("       |       |    \n")
+    print("  \(d[0])    |  \(d[1])    |  \(d[2])  \n")
+    print("_______|_______|_______\n")
+    print("       |       |       \n")
+    print("  \(d[3])    |  \(d[4])    |  \(d[5])  \n")
+    print("_______|_______|_______\n")
+    print("       |       |    \n")
+    print("  \(d[6])    |  \(d[7])    |  \(d[8])  \n")
+    print("       |       |       \n")
+
 }
 
 func victoryLogicX() {
