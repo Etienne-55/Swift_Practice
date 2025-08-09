@@ -4,8 +4,7 @@ var position: Int = 0
 var position2: Int = 0
 var endGame = false
 
-//fix placing the two player mode game
-
+// TODO: fix placement bugs
 func mainMenu() {
 
 var condition: Int = 0
@@ -34,6 +33,7 @@ repeat {
     } while condition != 4
 }
 
+
 func cleanArrayAndPLayNormal() {
 
 d.removeAll()
@@ -43,6 +43,7 @@ print("     Tic Tac Toe!    \n ")
 mainGame()
 
 }
+
 
 func cleanArrayAndPLayHard() {
 
@@ -54,6 +55,7 @@ hardGame()
 
 }
 
+
 func cleanArrayAndPLayTwoPlayers() {
 
 d.removeAll()
@@ -63,6 +65,7 @@ print("     Tic Tac Toe!    \n ")
 twoPlayersGame()
 
 }
+
 
 func mainGame() {
 
@@ -126,7 +129,7 @@ repeat {
     if let userInput = readLine(), let position = Int(userInput) {
     
     d[position] = "x"
-
+//BUG: fix
     if d[position] != "x" && d[position] != "o" {
         d[position] = "x"
     } else {
@@ -224,7 +227,7 @@ repeat {
     } else {
         print("\n")
     }
-    
+   //BUG: fix 
     if position > 8 {
         print("Invalid number")
     } else {
@@ -280,24 +283,17 @@ func playerInputX() {
 
     if let userInput = readLine(), let position = Int(userInput) {
 
-    d[position] = "x"
-
-        if position < 9 {
-            if d[position] != "x"{
-                if d[position] != "o" {
-                    d[position] = "x"
-                } else {
-                    print("Invalid placementen")
-                }
-            } else {
-                print("Invalid placement")
-            }    
-        } else {
-            print("Invalid placement")
-        }
+        if d[position] == "o" {
+            print("Invalid position")
+        }else{
+            d[position] = "x"
+       }
     }
 }
 
+
+func playerInputO() {}
+//BUG: 
 
 func victoryLogicX() {
     if position > 9 {
