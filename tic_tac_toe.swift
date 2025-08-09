@@ -72,21 +72,7 @@ repeat {
 
     victoryLogicX()
 
-    if let userInput = readLine(), let position = Int(userInput) {
-    
-    d[position] = "x"
-
-    if d[position] != "x" && d[position] != "o" {
-        d[position] = "x"
-    } else {
-        print("\n")
-    }
-    
-    if position > 8 {
-        print("Invalid number")
-    } else {
-        d[position] = "x"
-    } 
+    playerInputX()
 
     let randomPositionArray = Array(0...8).shuffled()
 
@@ -124,7 +110,6 @@ repeat {
 
     victoryLogicO()
 
-        }
     } while endGame == false
     print("Game ended")
 }
@@ -272,6 +257,7 @@ repeat {
     print("Game ended")
 }
 
+
 func boardGame() {
 
     print("PLayer 1 (X) - Player 2 (O)\n")
@@ -288,6 +274,30 @@ func boardGame() {
     print("       |       |       \n")
 
 }
+
+
+func playerInputX() {
+
+    if let userInput = readLine(), let position = Int(userInput) {
+
+    d[position] = "x"
+
+        if position < 9 {
+            if d[position] != "x"{
+                if d[position] != "o" {
+                    d[position] = "x"
+                } else {
+                    print("Invalid placementen")
+                }
+            } else {
+                print("Invalid placement")
+            }    
+        } else {
+            print("Invalid placement")
+        }
+    }
+}
+
 
 func victoryLogicX() {
     if position > 9 {
